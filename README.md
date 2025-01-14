@@ -1,4 +1,6 @@
-# vendure-vercel-commerce-backend
+# Vendure x Next.js Commerce 
+
+This Vendure project poweres the [Next.js Commerce starter for Vendure](https://github.com/vendure-ecommerce/vercel-commerce). 
 
 This project was generated with [`@vendure/create`](https://github.com/vendure-ecommerce/vendure/tree/master/packages/create).
 
