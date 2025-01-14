@@ -8,6 +8,7 @@ export class ProductResolver {
 
     @ResolveField()
     async priceRange(@Ctx() ctx: RequestContext, @Parent() product: Product) {
+        // TODO: Improve with caching
         const variants = await this.productVariantService.getVariantsByProductId(ctx, product.id);
         const prices = variants.items.map(v => v.priceWithTax).sort();
 
