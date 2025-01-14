@@ -9,6 +9,7 @@ import {AssetServerPlugin} from '@vendure/asset-server-plugin';
 import {AdminUiPlugin} from '@vendure/admin-ui-plugin';
 import 'dotenv/config';
 import path from 'path';
+import { VercelCommercePlugin } from './plugins/vercel-commerce/vercel-commerce.plugin';
 
 const IS_DEV = process.env.APP_ENV === 'dev';
 const serverPort = +process.env.PORT || 3000;
@@ -120,5 +121,6 @@ export const config: VendureConfig = {
                 apiPort: serverPort,
             },
         }),
+        VercelCommercePlugin.init({}),
     ],
 };
